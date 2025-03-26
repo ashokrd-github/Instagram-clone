@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ReelCommentActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/comments_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comments_toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="8dp" />
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        android:padding="3dp"
+        android:background="@color/shimmerColors"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_comment_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:civ_border_color="@color/text"
+            app:civ_border_width="1dp"
+            android:src="@drawable/profile"
+            android:layout_margin="5dp"/>
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/reel_comment_text"
+            android:hint="Add a comment..."
+            android:textColor="@color/black"
+            android:textColorHint="@color/text"
+            android:background="@color/transparent"
+            android:padding="8dp"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/emoji"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/emoji"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/keyboard"
+            android:visibility="gone"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/keyboard"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_comment_send"
+            android:padding="3dp"
+            android:src="@drawable/send"/>
+
+    </LinearLayout>
+    <androidx.emoji2.emojipicker.EmojiPickerView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:visibility="gone"
+        app:emojiGridColumns="7"
+        android:id="@+id/emoji_picker"/>
+
+</LinearLayout>
+
+
+</RelativeLayout>

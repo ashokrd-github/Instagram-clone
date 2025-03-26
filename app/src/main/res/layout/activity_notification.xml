@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.NotificationActivity">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+                android:id="@+id/notification_toolbar"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                app:title="Notifications"
+                app:titleTextColor="@color/text"
+                android:layout_marginTop="2dp"/>
+
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/notification_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/data_view"
+            android:orientation="vertical">
+
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+            <include layout="@layout/notification_shimmer_layout"/>
+
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notification_toolbar"
+        android:layout_margin="5dp"
+        tools:listitem="@layout/notification_item"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

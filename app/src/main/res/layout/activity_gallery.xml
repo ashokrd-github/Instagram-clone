@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.GalleryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/update_pass_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Update your password"/>
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/fill_heart"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Emails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        app:boxStrokeColor="@color/text"
+        app:hintTextColor="@color/text"
+        android:textColorHint="@color/text"
+        android:hint="Enter your email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/forEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="2dp"
+            app:cornerRadius="4dp"
+            android:layout_gravity="center"
+            android:textColor="@color/text"
+            android:textStyle="bold"
+            android:inputType="textEmailAddress"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Sumbmit"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:elevation="12dp"
+        android:shadowColor="@color/text"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/text"
+        android:textStyle="normal"
+        android:layout_below="@id/Emails"
+        />
+
+</LinearLayout>

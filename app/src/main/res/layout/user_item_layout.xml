@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userProfile"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:src="@drawable/profile"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userProfile"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:text="userName"
+                android:textColor="@color/text"
+                android:textStyle="bold|normal" />
+
+            <TextView
+                android:id="@+id/fullName"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:text="fullName"
+                android:textColor="@color/text"
+                android:layout_marginStart="10dp"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnFollow"
+            android:layout_width="118dp"
+            android:layout_height="40dp"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:text="Follow"
+            android:layout_marginEnd="10dp"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            android:textColor="@color/text"
+            android:textStyle="bold"
+            android:shadowColor="@color/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragments">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/app_bar_layout"
+                >
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/home_toolbar"
+                    android:layout_height="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="top"
+                    android:gravity="top"
+                    android:layout_marginLeft="6dp"
+                    android:layout_alignParentStart="true"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="40dp"
+                            android:text="Likeee"
+                            android:textColor="@color/red"
+                            android:textStyle="bold"
+                            android:textSize="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_alignParentLeft="true"
+                            />
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/notification"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/circle_notification"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="55dp"
+                            android:layout_alignParentRight="true"/>
+
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentTop="true"
+                            app:civ_border_overlay="true"
+                            android:layout_marginTop="4dp"
+                            android:backgroundTint="@color/red"
+                            android:background="@drawable/circie_btn"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="55dp" />
+
+                        <TextView
+                            android:id="@+id/notificationCounter"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_marginEnd="55dp" />
+
+
+
+                        <ImageView
+                            android:id="@+id/message"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/edit_pen"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="10dp"
+                            android:elevation="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_story"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/home_shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/data_view"
+                    android:orientation="vertical">
+                    <include layout="@layout/home_shimmer_layout"/>
+
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

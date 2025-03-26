@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountSettingActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:id="@+id/app_bar_layout_accountSettings"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/accountSettings_toolbar"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/close"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_centerInParent="true"
+                    />
+
+                <ImageButton
+                    android:id="@+id/checked"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:color/white"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/done_done" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_accountSettings"
+        android:layout_below="@id/app_bar_layout_accountSettings"
+        >
+
+        <LinearLayout
+            android:id="@+id/accountSettings_top_bar_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/userProfile"
+                   android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:layout_gravity="center"
+                   android:elevation="12dp"
+                   android:src="@drawable/profile"
+                   app:civ_border_color="@color/text"
+                   app:civ_border_width="2dp"
+               />
+
+
+            <TextView
+                android:id="@+id/changeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_image"
+                android:textColor="@color/text"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/text"
+                app:boxStrokeColor="@color/text"
+                app:hintTextColor="@color/text"
+                android:hint="Full name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeWidth="2dp"
+                    app:cornerRadius="4dp"
+                    android:cursorVisible="true"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                app:boxStrokeColor="@color/text"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/text"
+                app:hintTextColor="@color/text"
+                android:layout_marginRight="5dp"
+                android:hint="User name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeWidth="2dp"
+                    app:cornerRadius="4dp"
+                    android:textStyle="bold"
+                    android:cursorVisible="true"
+                    android:textColor="@color/text"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/text"
+                app:boxStrokeColor="@color/text"
+                app:hintTextColor="@color/text"
+                android:layout_marginRight="5dp"
+                android:hint="Bio">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeWidth="2dp"
+                    app:cornerRadius="4dp"
+                    android:cursorVisible="true"
+                    android:maxLines="10"
+                    android:inputType="text"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/deleteAccount"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="12dp"
+        android:elevation="12dp"
+        android:layout_marginStart="25dp"
+        android:shadowColor="@color/white"
+        android:text="Log Out"
+        android:textColor="@color/text"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/deleteAccount"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_marginEnd="10dp"
+        android:elevation="12dp"
+        android:layout_marginStart="25dp"
+        android:textColor="@color/text"
+        android:shadowColor="@color/white"
+        android:text="Delete Account"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

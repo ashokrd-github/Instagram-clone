@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginEnd="100dp"
+    android:gravity="start"
+    android:layout_gravity="start">
+
+    <LinearLayout
+        android:id="@+id/mLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        >
+
+
+
+        <TextView
+            android:id="@+id/sent_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:paddingHorizontal="10dp"
+            android:text="send the message"
+            android:padding="8sp"
+            android:textStyle="bold"
+            android:background="@drawable/receiver"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/receive_image"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:background="@drawable/receiver"
+        android:backgroundTint="@color/shimmerColors"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        android:src="@drawable/picture"/>
+
+
+    <FrameLayout
+        android:id="@+id/receiveFrame"
+        android:layout_width="220dp"
+        android:layout_height="250dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_profile"
+        android:backgroundTint="@color/shimmerColors"
+        android:visibility="gone"
+        android:layout_margin="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="220dp"
+            android:layout_height="250dp">
+
+            <VideoView
+                android:id="@+id/receive_videoView"
+                android:layout_width="180dp"
+                android:layout_height="230dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/Rp_reel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/circie_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/video"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="5dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </FrameLayout>
+
+
+<!--    <VideoView-->
+<!--        android:id="@+id/receive_videoView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_margin="3dp"-->
+<!--        />-->
+
+
+    <TextView
+        android:id="@+id/receiveTime"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:layout_gravity="start"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:gravity="start"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        android:text="receive the message"
+        android:textSize="10sp"/>
+</LinearLayout>

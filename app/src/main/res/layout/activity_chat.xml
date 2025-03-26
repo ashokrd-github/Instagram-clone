@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.chatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout_profile"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorPrimary"
+        android:elevation="12dp"
+        app:elevation="50dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/chat_profile_toolbar"
+            android:layout_width="match_parent"
+            app:popupTheme="@color/white"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="50"
+                android:layout_marginEnd="50dp">
+
+                <ImageView
+                    android:id="@+id/left_arrow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/arrow" />
+
+                <LinearLayout
+                    android:id="@+id/profile_112"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/option_profile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profile" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="23dp"
+                        android:paddingBottom="5dp"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:text="userName"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold|normal" />
+
+                    <TextView
+                        android:id="@+id/full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:layout_gravity="start"
+                        android:visibility="gone"
+                        android:gravity="start"
+                        android:text="userName"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold|normal" />
+
+                    <TextView
+                        android:id="@+id/view_online"
+                        android:layout_width="105dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:text="online"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/call_center" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/video_call" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.01sp"-->
+<!--        android:layout_below="@id/app_bar_layout_profile"-->
+<!--        android:background="@color/colorPrimary" />-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/charRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:elevation="10dp"
+        android:padding="3dp"
+        android:background="@color/shimmerColors"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/emoji"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/emoji"/>
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/messageBox"
+            android:hint="Type a message"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text"
+            android:background="@color/transparent"
+            android:padding="8dp"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/sentButton"
+            android:layout_margin="8dp"
+            android:src="@drawable/send"/>
+
+
+    </LinearLayout>
+    <androidx.emoji2.emojipicker.EmojiPickerView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:emojiGridColumns="7"
+        android:visibility="gone"
+        android:id="@+id/emoji_picker"/>
+
+</LinearLayout>

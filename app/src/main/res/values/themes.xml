@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Likee" parent="Theme.Material3.DayNight.NoActionBar">
+         Customize your light theme here.
+         <item name="colorPrimary">@color/white</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="materialAlertDialogTheme">@color/text</item>
+        <item name="actionOverflowButtonStyle">@style/Threedotcolor</item>
+
+
+
+
+    </style>
+
+    <style name="Theme.Likee" parent="Base.Theme.Likee" />
+    <style name="Threedotcolor" parent="Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="tint">#000000</item>
+    </style>
+</resources>
